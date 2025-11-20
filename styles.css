@@ -1,0 +1,846 @@
+:root {
+    --color-dark-blue: #0b0720;
+    --color-primary-blue: #4a40d5;
+    --color-secondary-purple: #9d4edd;
+    --color-text-light: #f0f0f0;
+    --color-text-grey: #a0a0a0;
+    --color-box-bg: #1c1836;
+    --color-border-accent: #2c2554;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Asume una fuente genérica, reemplaza con tu elección de Google Fonts */
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--color-dark-blue);
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+
+/*Habilidaes*/
+
+.Habilidades {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.Habilidades h2 {
+    margin-bottom: 3rem;
+}
+
+.botoneshabilidades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+.botoneshabilidades {
+    margin-bottom: 20px;
+}
+
+/* From Uiverse.io by Shell0110 */
+.faq-button {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffe53b;
+    background-image: linear-gradient(147deg, #a1b2df 0%, #345580 74%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.151);
+    position: relative;
+    padding: 0px;
+}
+
+.faq-button:hover {
+    animation: jello-vertical 1s both;
+}
+
+.faq-button svg {
+    width: 60%;
+    height: 60%;
+    fill: white;
+}
+
+@keyframes jello-vertical {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    40% {
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    50% {
+        transform: scale3d(0.85, 1.15, 1);
+    }
+
+    65% {
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    75% {
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.tooltip {
+    position: absolute;
+    top: -20px;
+    opacity: 0;
+    background-color: #ffe53b;
+    background-image: linear-gradient(147deg, #c9cad8 0%, #345580 74%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.2s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+}
+
+.tooltip::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    background-size: 1000%;
+    background-position: center;
+    transform: rotate(45deg);
+    bottom: -15%;
+    transition-duration: 0.3s;
+}
+
+.faq-button:hover .tooltip {
+    top: -40px;
+    opacity: 1;
+    transition-duration: 0.3s;
+}
+
+
+
+
+
+
+/*boton futurista */
+
+.botonfuturista,
+.botonfuturista::after {
+    padding: 11px 15px;
+    font-size: 18px;
+    background: linear-gradient(45deg, transparent 5%, #9d4edd 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    line-height: 1;
+    box-shadow: 6px 0px 0px #00e6f6;
+    outline: transparent;
+    position: relative;
+}
+
+.botonfuturista::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    content: "HOVER ME";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00e6f6 3%, #00e6f6 5%, #9b49dd 5%);
+    text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+    clip-path: var(--slice-0);
+}
+
+.botonfuturista:hover::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+
+
+/* --- Reutilizables y Tipografía --- */
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--color-primary-blue);
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+section {
+    padding: 80px 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- Navbar --- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Fondo semitransparente para el efecto flotante */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-text-light);
+}
+
+.logo span {
+    color: var(--color-primary-blue);
+}
+
+.navbar nav a {
+    margin-left: 25px;
+    color: var(--color-text-grey);
+}
+
+.navbar nav a:hover {
+    color: var(--color-primary-blue);
+}
+
+/* --- Hero Section (Principal) --- */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    /* Degradado de fondo complejo */
+    background: linear-gradient(135deg, #0b0720 0%, #1c1836 50%, #180a2b 100%);
+}
+
+.dreamer-text {
+    position: absolute;
+    top: 100%;
+    left: 2%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.05);
+    font-weight: bold;
+    letter-spacing: 20px;
+    transform-origin: 0 0;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.text-side {
+    max-width: 50%;
+}
+
+.text-side h1 {
+    color: var(--color-primary-blue);
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.text-side h2 {
+    color: var(--color-text-light);
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.todoslosbotonesfuturistas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .todoslosbotonesfuturistas {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons i {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    color: var(--color-text-grey);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: var(--color-primary-blue);
+}
+
+.image-side {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    /* Creación del fondo degradado detrás de la imagen */
+    background: linear-gradient(135deg, var(--color-primary-blue) 0%, var(--color-secondary-purple) 100%);
+    border-radius: 50%;
+    /* Para simular un círculo */
+    display: flex;
+    align-items: flex-end;
+    /* Coloca la imagen en la parte inferior del círculo */
+    justify-content: center;
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    /* Ajusta la posición para que parezca que está parado en el borde */
+}
+
+.client-badge {
+    position: absolute;
+    top: 50px;
+    right: -50px;
+    background-color: var(--color-primary-blue);
+    color: var(--color-text-light);
+    padding: 5px 20px;
+    border-radius: 20px;
+    transform: rotate(15deg);
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* --- What I Do (Servicios) --- */
+
+.what-i-do {
+    background-color: var(--color-dark-blue);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-box {
+    background-color: var(--color-box-bg);
+    padding: 30px;
+    border-radius: 10px;
+    border-bottom: 3px solid var(--color-primary-blue);
+    /* Borde de color en la parte inferior */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-box-bg);
+}
+
+.service-box i {
+    font-size: 2rem;
+    color: var(--color-primary-blue);
+    margin-bottom: 15px;
+}
+
+.service-box h3 {
+    margin-bottom: 10px;
+}
+
+/* --- My Resume (Currículum) --- */
+
+.my-resume {
+    background-color: var(--color-dark-blue);
+    /* Mismo color para un flujo continuo */
+}
+
+.resume-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-grey);
+    padding: 10px 25px;
+    margin: 0 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    color: var(--color-text-light);
+    border-bottom-color: var(--color-primary-blue);
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.edu-item {
+    padding: 20px;
+    border: 1px solid var(--color-border-accent);
+    border-radius: 10px;
+    background-color: var(--color-box-bg);
+}
+
+.edu-item h3 {
+    color: var(--color-primary-blue);
+}
+
+.edu-item p {
+    color: var(--color-text-grey);
+}
+
+.edu-item .years {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    background-color: var(--color-primary-blue);
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* --- Portfolio --- */
+
+.portfolio {
+    padding-bottom: 100px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-item:nth-child(2) {
+    grid-column: span 2;
+    /* Imagen más ancha para el centro */
+}
+
+
+
+
+
+
+
+
+/*TARJETAS QUE SE DAN VUELTA, SON PARA EL LINK A OTRAS PAGINAS*/
+
+/* From Uiverse.io by ElSombrero2 */
+.card {
+    overflow: visible;
+    width: 300px;
+    height: 450px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms;
+    box-shadow: 0px 0px 10px 1px #000000e8;
+    border-radius: 5px;
+}
+
+.front,
+.back {
+    background-color: #151515;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.back {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 0px;
+}
+
+.back::before {
+    position: absolute;
+    content: ' ';
+    display: block;
+    width: 160px;
+    height: 160%;
+    background: linear-gradient(90deg, transparent, #b4cbdb, #345580, #9db5cf, #ffffff, transparent);
+    animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content.pensa {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    /* Fondo con imagen del proyecto y overlay para legibilidad */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/pensa.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.back-content.libreria {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    /* Fondo con imagen del proyecto y overlay para legibilidad */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/logolibreria.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.back-content.vital {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    /* Fondo con imagen del proyecto y overlay para legibilidad */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/vital.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.back-content.blackavalone {
+    position: absolute;
+    width: 99%;
+    height: 99%;
+    /* Fondo con imagen del proyecto y overlay para legibilidad */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/blackavalone.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.badge {
+    margin-bottom: 2px;
+}
+
+
+
+.card:hover .content {
+    transform: rotateY(180deg);
+}
+
+@keyframes rotation_481 {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    0% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.front {
+    transform: rotateY(180deg);
+    color: white;
+}
+
+.front .front-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.front-content .badge {
+    background-color: #00000055;
+    padding: 2px 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    width: fit-content;
+}
+
+.description {
+    box-shadow: 0px 0px 10px 5px #00000088;
+    width: 100%;
+    padding: 10px;
+    background-color: #00000099;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+}
+
+.title {
+    font-size: 20px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title p {
+    width: 50%;
+}
+
+.card-footer {
+    color: #ffffff88;
+    margin-top: 5px;
+    font-size: 8px;
+}
+
+
+.card-footer.texto {
+    font-size: 15px;
+    text-align: center;
+}
+
+.front .img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #ffbb66;
+    position: relative;
+    filter: blur(15px);
+    animation: floating 2600ms infinite linear;
+}
+
+#bottom {
+    background-color: #ff8866;
+    left: 50px;
+    top: 0px;
+    width: 150px;
+    height: 150px;
+    animation-delay: -800ms;
+}
+
+#right {
+    background-color: #ff2233;
+    left: 160px;
+    top: -80px;
+    width: 30px;
+    height: 30px;
+    animation-delay: -1800ms;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+.tarjetasquesedanvuelta {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}

@@ -638,12 +638,12 @@ section {
     animation: rotation_481 5000ms infinite linear;
 }
 
-.back-content.pensa {
+.back-content.hielosaladillo {
     position: absolute;
     width: 99%;
     height: 99%;
     /* Fondo con imagen del proyecto y overlay para legibilidad */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/pensa.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/hielosaladillo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -692,12 +692,12 @@ section {
     gap: 30px;
 }
 
-.back-content.blackavalone {
+.back-content.lamteatro {
     position: absolute;
     width: 99%;
     height: 99%;
     /* Fondo con imagen del proyecto y overlay para legibilidad */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/blackavalone.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/lamteatro.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -843,30 +843,4 @@ section {
     gap: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
-}
-
-/* Media Query para la sección de tarjetas en dispositivos móviles */
-@media (max-width: 768px) {
-    .tarjetasquesedanvuelta {
-        flex-direction: column;
-        /* Cambia la dirección del flexbox a vertical */
-        align-items: center;
-        /* Centra las tarjetas en el eje transversal (horizontal) */
-        gap: 30px;
-        /* Ajusta el espacio entre las tarjetas apiladas */
-    }
-
-    .card {
-        width: 90%;
-        /* Hace que la tarjeta ocupe el 90% del ancho disponible */
-        max-width: 350px;
-        /* Establece un ancho máximo para evitar que se estire demasiado */
-    }
-
-    .education-grid {
-        grid-template-columns: 1fr;
-        /* Cambia la grilla a una sola columna */
-        gap: 20px;
-        /* Opcional: reduce el espacio entre tarjetas en móvil */
-    }
 }
